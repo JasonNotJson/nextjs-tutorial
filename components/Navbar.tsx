@@ -3,11 +3,11 @@ import { CustomIconProps } from "@/types";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 h-screen justify-center text-center w-16 m-0 flex flex-col bg-primary-blue text-white shadow-lg">
+    <div className="fixed top-0 left-0 h-screen justify-center text-center w-16 m-0 flex flex-col bg-primary-blue text-white shadow-lg">
       <NavBarIcon text={"構"} />
       <NavBarIcon text={"築"} />
       <NavBarIcon text={"中"} />
-    </nav>
+    </div>
   );
 };
 

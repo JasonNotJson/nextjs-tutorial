@@ -7,17 +7,17 @@ import Image from "next/image";
 const Hero = () => {
   const handleScroll = () => {};
   return (
-    <div className="flex flex-col gap-5 items-center justify-center h-screen overflow-hidden">
+    <div className="flex flex-col gap-5 items-center justify-center h-screen overflow-hidden pl-16">
       <div className="text-center p-4 m-4">
         {/* Title and image container */}
-        <div className="flex justify-center items-center space-x-4 pl-7 m-2">
+        <div className="flex justify-center items-center space-x-4 m-2">
           <h1 className="text-2xl sm:text-4xl md:text-7xl font-extrabold">
             早稲田大学航空部
           </h1>
-          <div className="flex ml-5 pl-5">
+          <div className="flex">
             <div className="relative w-52 h-52 z-0">
               <Image
-                src="/Group 2.png"
+                src="/diamond_logo.svg"
                 alt="image"
                 fill
                 className="object-contain"
