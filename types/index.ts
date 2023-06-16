@@ -5,3 +5,8 @@ export interface CustomButtonProps {
   containerStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
+
+export interface CustomIconProps {
+  icon?: string;
+  text: string;
+}
