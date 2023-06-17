@@ -51,7 +51,7 @@ const Notes = () => {
         body: inputVal,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
-        userName: "New User",
+        userName: "パク",
         noteId: uuidv4(),
       };
 
