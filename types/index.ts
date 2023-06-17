@@ -12,3 +12,15 @@ export interface CustomIconProps {
   text?: string;
   href?: string;
 }
+
+export interface LessonCardProps {
+  lessonNum: number;
+  context: string;
+}
+
+export interface LessonContentProps extends LessonCardProps {
+  body: {
+    user: string;
+    advice: string;
+  };
+}
