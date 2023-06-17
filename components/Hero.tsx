@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="text-center p-4 m-4">
         {/* Title and image container */}
         <div className="flex justify-center items-center space-x-4 m-2">
-          <h1 className="text-2xl sm:text-4xl md:text-7xl font-extrabold">
+          <h1 className="text-black dark:text-white text-2xl sm:text-4xl md:text-7xl xl:text-8xl font-extrabold">
             早稲田大学航空部
           </h1>
           <div className="flex">
@@ -20,7 +20,7 @@ const Hero = () => {
                 src="/diamond_logo_big.svg"
                 alt="image"
                 fill
-                className="object-contain hover:animate-spin animation-duration[0.1s] animation-timing-linear animation-iteration-count[infinite]"
+                className="object-contain hover:animate-spin animation-duration[0.1s] animation-timing-linear animation-iteration-count[infinite] ml-2"
               />
             </div>
           </div>

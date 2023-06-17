@@ -1,9 +1,9 @@
 import React from "react";
-import Notes from "./Notes";
+import { Notes } from "./components";
 
-const page = () => {
+export const page = () => {
   return (
-    <div>
+    <div className="overflow-x-auto text-black dark:text-white self-start">
       <Notes />
     </div>
   );

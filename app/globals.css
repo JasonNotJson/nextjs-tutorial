@@ -33,6 +33,11 @@
   }
 }
 
+.custom-zebra tr:nth-child(even) {
+  background-color: #c0caf6;
+  color: black;
+}
+
 * {
   margin: 0;
   padding: 0;
