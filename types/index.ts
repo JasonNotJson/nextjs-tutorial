@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import { IconType } from "react-icons";
 
 export interface CustomButtonProps {
   title: string;
@@ -7,6 +8,7 @@ export interface CustomButtonProps {
 }
 
 export interface CustomIconProps {
-  icon?: string;
-  text: string;
+  icon: IconType;
+  text?: string;
+  href?: string;
 }
