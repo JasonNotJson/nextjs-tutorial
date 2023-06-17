@@ -47,14 +47,16 @@ const NotesComponent = () => {
 
   return (
     <div className="mt-12 ml-16">
-      <div className="justify-center text-center text-4xl font-extrabold mb-4">
+      <div className="justify-center text-center text-6xl font-extrabold mb-4">
         やらかしノート
+        <div className="text-lg font-bold m-2">
+          限りなく軽いやらかしまでの記録
+        </div>
       </div>
-      <div className="text-lg m-2">限りなく軽いやらかしを記録する欄です</div>
       <div className="mb-4 items-center justify-center">
         <input
           type="text"
-          className="input input-bordered input-secondary w-3/4 bg-main-bg text-black dark:text-white dark:bg-main-dark-bg"
+          className="input input-bordered input-secondary w-3/4 bg-main-bg text-black dark:dark-text dark:bg-dark-main-bg"
           placeholder="Enter new note"
           value={inputVal}
           onChange={(e) => setInputVal(e.target.value)}

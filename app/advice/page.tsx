@@ -3,7 +3,7 @@ import { LessonGridComponent } from "@/components";
 
 const advice = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden text-light-text dark:text-dark-text">
       <LessonGridComponent />
     </div>
   );
