@@ -3,27 +3,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const Notes = () => {
-  // Dummy data
-  // const dummyNotes = [
-  //   {
-  //     userId: "1",
-  //     body: "学年ミーティングの途中間違ってズームを消してしまった。",
-  //     createdAt: "2023-06-15T00:00:00.000Z",
-  //     updatedAt: "2023-06-15T00:00:00.000Z",
-  //     userName: "パク",
-  //     noteId: "12315415124131231231",
-  //   },
-  //   {
-  //     userId: "1",
-  //     body: "学年ミーティングの途中間違ってズームを消してしまった。",
-  //     createdAt: "2023-06-15T00:00:00.000Z",
-  //     updatedAt: "2023-06-15T00:00:00.000Z",
-  //     userName: "パク",
-  //     noteId: "12451318i0989089009790",
-  //   },
-  // ];
-
+const NotesComponent = () => {
   const [inputVal, setInputVal] = useState("");
   const [notes, setNotes] = useState([
     {
@@ -109,4 +89,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default NotesComponent;

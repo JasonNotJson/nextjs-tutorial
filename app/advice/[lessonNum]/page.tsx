@@ -1,8 +1,8 @@
-import React from "react";
+type Props = {
+  lessonNum: number;
+};
 
-type Props = {};
-
-const Lesson = (props: Props) => {
+const Lesson = (lessonNum: Props) => {
   return <div>Lesson</div>;
 };
 

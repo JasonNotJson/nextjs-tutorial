@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CustomIconProps } from "@/types";
 import {
   FaClipboardList,
+  FaCopy,
   FaDatabase,
   FaHome,
   FaMap,
@@ -18,8 +19,9 @@ const Navbar = () => {
         <NavBarIcon icon={FaHome} text={"Home"} href={"/"} />
         <NavBarIcon icon={FaClipboardList} text={"Note"} href={"/note"} />
         <NavBarIcon icon={FaUsers} text={"Team Advice"} href={"/advice"} />
-        <NavBarIcon icon={FaDatabase} text={"Flight Records"} />
+        <NavBarIcon icon={FaCopy} text={"Docs"} />
         <NavBarIcon icon={FaMap} text={"Map"} />
+        <NavBarIcon icon={FaDatabase} text={"Flight Records"} />
       </div>
       <div className="spacer flex-grow"></div>
       <div className="bottom-section flex flex-col items-center mb-4">
