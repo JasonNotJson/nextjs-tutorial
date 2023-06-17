@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="diamond_logo.png" />
-      <body className="relative flex flex-col min-h-screen">
+      <body className="relative flex flex-col min-h-screen bg-main-bg dark:bg-main-dark-bg dark:text-white">
         <main className="flex-1 flex items-center justify-center">
           <Navbar />
           {children}

@@ -6,7 +6,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   mode: "jit",
-  darkMode: "media",
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -14,11 +14,20 @@ module.exports = {
       },
       colors: {
         "black-100": "#2B2C35",
-        "primary-blue": {
-          DEFAULT: "#2B59FF",
+        "main-bg": {
+          DEFAULT: "#f1f5f9",
           100: "#F5F8FF",
         },
-        "secondary-orange": "#f79761",
+        "primary-blue": {
+          DEFAULT: "#11257e",
+          100: "#11257e",
+        },
+        "main-dark-bg": "#262626",
+        "primary-button": "#3355CC",
+        "secondary-button": "#c0caf6",
+        "hover-button": "#4D88FF",
+        accent: "#8e1728",
+        "secondary-accent": "#B0253A",
         "light-white": {
           DEFAULT: "rgba(59,60,152,0.03)",
           100: "rgba(59,60,152,0.02)",

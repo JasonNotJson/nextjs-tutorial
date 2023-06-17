@@ -17,10 +17,10 @@ const Hero = () => {
           <div className="flex">
             <div className="relative w-52 h-52 z-0">
               <Image
-                src="/diamond_logo.svg"
+                src="/diamond_logo_big.svg"
                 alt="image"
                 fill
-                className="object-contain"
+                className="object-contain hover:animate-spin animation-duration[0.1s] animation-timing-linear animation-iteration-count[infinite]"
               />
             </div>
           </div>
@@ -28,12 +28,12 @@ const Hero = () => {
 
         {/* Subtitle and button container */}
         <div className="mt-2 flex flex-col items-center">
-          <p className="text-lg sm:text-2xl md:text-4xl text-black-100 font-light mt-5">
+          <p className="text-lg sm:text-2xl md:text-4xl text-black-100 dark:text-white font-light mt-5">
             デザインアイディアが必要です
           </p>
           <CustomButton
             title="助けてください"
-            containerStyles="bg-primary-blue text-white rounded-full mt-10"
+            containerStyles="bg-primary-button text-white hover:bg-hover-button rounded-full mt-10"
             handleClick={handleScroll}
           />
         </div>
