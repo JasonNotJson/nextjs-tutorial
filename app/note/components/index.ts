@@ -1,3 +1,3 @@
-import Notes from "./Notes";
+import NotesComponent from "./NotesComponent";
 
-export { Notes };
+export { NotesComponent };
