@@ -14,7 +14,7 @@ const LessonGridComponent = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-8 pt-8 justify-center h-screen">
+    <div className="flex flex-col items-center mt-8 pt-8 justify-center">
       <div className="text-6xl text-center font-extrabold mb-4">
         レッスンアドバイス
         <div className="text-lg font-bold mt-6">新しいレッスンに進む部員へ</div>
