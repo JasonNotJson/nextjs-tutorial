@@ -1,3 +1,24 @@
+import { Note } from "@/types";
+
+export const dummyNotes: Note[] = [
+  {
+    userId: "1",
+    body: "学年ミーティングの途中間違ってズームを消してしまった。",
+    createdAt: "2023-06-15T00:00:00.000Z",
+    updatedAt: "2023-06-15T00:00:00.000Z",
+    userName: "パク",
+    noteId: "12315415124131231231",
+  },
+  {
+    userId: "1",
+    body: "学年ミーティングの途中間違ってズームを消してしまった。",
+    createdAt: "2023-06-15T00:00:00.000Z",
+    updatedAt: "2023-06-15T00:00:00.000Z",
+    userName: "パク",
+    noteId: "12451318i0989089009790",
+  },
+];
+
 export const dummyLessons = [
   {
     lessonNum: 1,

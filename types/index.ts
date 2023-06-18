@@ -13,6 +13,15 @@ export interface CustomIconProps {
   href?: string;
 }
 
+export interface Note {
+  userId: string;
+  body: string;
+  createdAt: string;
+  updatedAt: string;
+  userName: string;
+  noteId: string;
+}
+
 export interface LessonCardProps {
   lessonNum: number;
   context: string;
