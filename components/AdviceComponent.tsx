@@ -14,7 +14,7 @@ const AdviceComponent: React.FC<LessonAdviceProps> = ({ cardProps, body }) => {
         {body.map((item, index) => (
           <div className="collapse ">
             <input type="checkbox" className="peer " />
-            <div className="indent-2 collapse-title bg-primary-button text-xl font-bold justify-center text-center [input:checked~&]:bg-secondary-accent [input:checked~&]:text-secondary-content">
+            <div className="indent-2 collapse-title bg-primary-button text-xl font-bold justify-center text-center text-dark-text [input:checked~&]:bg-secondary-accent [input:checked~&]:text-secondary-content">
               <div className="flex items-center justify-center ml-4 p-2">
                 {item.user}
               </div>

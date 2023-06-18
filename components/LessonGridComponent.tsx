@@ -27,7 +27,7 @@ const LessonGridComponent = () => {
 };
 
 const LessonCardComponent = ({ lessonNum, context }: LessonCardProps) => (
-  <div className="card card-bordered card-compact bg-primary-button hover:bg-hover-button overflow-y-auto light-text dark:text-dark-text">
+  <div className="card card-bordered card-compact bg-primary-button hover:bg-hover-button overflow-y-auto text-dark-text">
     <Link href={`/advice/${lessonNum}`}>
       <div className="card-title indent-5 mt-2">Lesson {lessonNum}</div>
       <div className="card-body text-sm">{context}</div>
