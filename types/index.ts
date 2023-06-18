@@ -19,8 +19,8 @@ export interface LessonCardProps {
 }
 
 export interface LessonAdviceProps {
-  cardProps?: LessonCardProps;
-  body?: {
+  cardProps: LessonCardProps;
+  body: {
     user: string;
     advice: string;
   }[];

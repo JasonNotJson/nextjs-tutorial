@@ -1,7 +1,10 @@
 import { LessonAdviceProps } from "@/types";
 import React from "react";
 
-const AdviceComponent: React.FC<LessonAdviceProps> = ({ cardProps, body }) => {
+const AdviceComponent: React.FC<LessonAdviceProps> = ({
+  cardProps,
+  body,
+}: LessonAdviceProps) => {
   return (
     <div className="mt-12 ml-16">
       <div className="justify-center text-center text-6xl font-extrabold mb-4">

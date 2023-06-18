@@ -1,5 +1,5 @@
 import React from "react";
-import { NotesComponent } from "@/components";
+import NotesComponent from "./NotesComponent";
 
 export const note = () => {
   return (
