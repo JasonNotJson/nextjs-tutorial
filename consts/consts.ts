@@ -1,48 +1,58 @@
 import { Note } from "@/types";
 
-export const student = [
+export const students = [
   {
     id: 1,
-    name: "パク",
+    name: "Park Joon Bin",
+    weight: 70,
   },
   {
     id: 2,
     name: "川島",
+    weight: 70,
   },
   {
     id: 3,
     name: "喜多",
+    weight: 40,
   },
   {
     id: 4,
     name: "宮田",
+    weight: 50,
   },
   {
     id: 5,
     name: "細川",
+    weight: 60,
   },
 ];
 
-export const coach = [
+export const coaches = [
   {
     id: 1,
-    name: "宗",
+    name: "長い苗字長い名前",
+    weight: 70,
   },
   {
     id: 2,
     name: "篠原",
+    weight: 70,
   },
   {
     id: 3,
     name: "戸張",
+    weight: 60,
   },
   {
     id: 4,
     name: "浅倉",
+    weight: 50,
   },
   {
     id: 5,
     name: "袴田",
+    weight: 65,
   },
 ];
 

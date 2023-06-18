@@ -1,7 +1,7 @@
 const Map = () => {
   return (
     <div className="overflow-hidden w-screen h-screen">
-      <div className="justfiy-center text-center text-sm md:text-4xl font-extrabold p-2 m-2">
+      <div className="justfiy-center text-center text-light-text dark:text-dark-text text-sm md:text-4xl font-extrabold p-2 m-2">
         サーマルマップ
       </div>
       <iframe

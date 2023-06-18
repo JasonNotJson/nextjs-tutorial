@@ -34,3 +34,18 @@ export interface LessonAdviceProps {
     advice: string;
   }[];
 }
+
+export interface Item {
+  id: number;
+  name: string;
+  [key: string]: any;
+}
+
+export interface CustomComboboxProps {
+  selectedEntity: Item | null;
+  setSelectedEntity: React.Dispatch<React.SetStateAction<Item | null>>;
+  items: Item[];
+  filterQuery: string;
+  setFilterQuery: React.Dispatch<React.SetStateAction<string>>;
+  placeholder: string;
+}

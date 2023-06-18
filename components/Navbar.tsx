@@ -15,7 +15,7 @@ import {
 
 const Navbar = () => {
   return (
-    <div className="fixed top-0 left-0 h-screen flex flex-col text-center w-16 m-0 dark:bg-dark-nav-bg text-white shadow-xl z-40">
+    <div className="fixed top-0 left-0 h-screen flex flex-col text-center w-16 m-0 bg-main-bg dark:bg-dark-nav-bg text-white shadow-xl z-40">
       <div className="spacer flex-grow"></div>
       <div className="center-section flex flex-col items-center">
         <NavBarIcon icon={FaHome} text={"Home"} href={"/"} />
