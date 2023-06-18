@@ -55,7 +55,7 @@ const NotesComponent = () => {
       <div className="mb-4 items-center justify-center">
         <input
           type="text"
-          className="input input-bordered input-secondary w-3/4 bg-main-bg text-black dark:dark-text dark:bg-dark-main-bg"
+          className="input input-bordered input-secondary w-3/4 bg-main-bg text-black dark:text-dark-text dark:bg-dark-main-bg"
           placeholder="Enter new note"
           value={inputVal}
           onChange={(e) => setInputVal(e.target.value)}

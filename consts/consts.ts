@@ -9,7 +9,7 @@ export const dummyLessons = [
       },
       {
         user: "川島",
-        advice: "Don't be afraid to ask questions.",
+        advice: "楽しめばいい",
       },
     ],
   },

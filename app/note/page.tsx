@@ -1,7 +1,7 @@
 import React from "react";
 import { NotesComponent } from "@/components";
 
-export const page = () => {
+export const note = () => {
   return (
     <div className="overflow-x-auto text-light-text dark:text-white self-start">
       <NotesComponent />
@@ -9,4 +9,4 @@ export const page = () => {
   );
 };
 
-export default page;
+export default note;

@@ -18,9 +18,10 @@ export interface LessonCardProps {
   context: string;
 }
 
-export interface LessonContentProps extends LessonCardProps {
-  body: {
+export interface LessonAdviceProps {
+  cardProps?: LessonCardProps;
+  body?: {
     user: string;
     advice: string;
-  };
+  }[];
 }
