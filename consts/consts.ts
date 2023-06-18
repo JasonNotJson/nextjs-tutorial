@@ -1,5 +1,51 @@
 import { Note } from "@/types";
 
+export const student = [
+  {
+    id: 1,
+    name: "パク",
+  },
+  {
+    id: 2,
+    name: "川島",
+  },
+  {
+    id: 3,
+    name: "喜多",
+  },
+  {
+    id: 4,
+    name: "宮田",
+  },
+  {
+    id: 5,
+    name: "細川",
+  },
+];
+
+export const coach = [
+  {
+    id: 1,
+    name: "宗",
+  },
+  {
+    id: 2,
+    name: "篠原",
+  },
+  {
+    id: 3,
+    name: "戸張",
+  },
+  {
+    id: 4,
+    name: "浅倉",
+  },
+  {
+    id: 5,
+    name: "袴田",
+  },
+];
+
 export const dummyNotes: Note[] = [
   {
     userId: "1",
