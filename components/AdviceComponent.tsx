@@ -1,5 +1,4 @@
 import { LessonAdviceProps } from "@/types";
-import React from "react";
 
 const AdviceComponent: React.FC<LessonAdviceProps> = ({
   cardProps,

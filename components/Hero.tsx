@@ -7,7 +7,7 @@ import Image from "next/image";
 const Hero = () => {
   const handleScroll = () => {};
   return (
-    <div className="flex flex-col gap-5 items-center justify-center h-screen overflow-hidden pl-16">
+    <div className="flex flex-col gap-5 items-center justify-center  overflow-hidden pl-16">
       <div className="text-center p-4 m-4">
         {/* Title and image container */}
         <div className="flex justify-center items-center space-x-4 m-2">
