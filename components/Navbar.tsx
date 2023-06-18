@@ -6,6 +6,7 @@ import {
   FaCopy,
   FaDatabase,
   FaHome,
+  FaList,
   FaMap,
   FaUser,
   FaUsers,
@@ -18,10 +19,11 @@ const Navbar = () => {
       <div className="center-section flex flex-col items-center">
         <NavBarIcon icon={FaHome} text={"Home"} href={"/"} />
         <NavBarIcon icon={FaClipboardList} text={"Note"} href={"/note"} />
-        <NavBarIcon icon={FaUsers} text={"Team Advice"} href={"/advice"} />
+        <NavBarIcon icon={FaList} text={"Team Advice"} href={"/advice"} />
         <NavBarIcon icon={FaCopy} text={"Docs"} />
         <NavBarIcon icon={FaMap} text={"Map"} />
         <NavBarIcon icon={FaDatabase} text={"Flight Records"} />
+        <NavBarIcon icon={FaUsers} text={"Team Management"} />
       </div>
       <div className="spacer flex-grow"></div>
       <div className="bottom-section flex flex-col items-center mb-4">
