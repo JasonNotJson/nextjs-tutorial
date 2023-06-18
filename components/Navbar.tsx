@@ -8,6 +8,7 @@ import {
   FaHome,
   FaList,
   FaMap,
+  FaPlane,
   FaUser,
   FaUsers,
 } from "react-icons/fa";
@@ -22,11 +23,8 @@ const Navbar = () => {
         <NavBarIcon icon={FaList} text={"Team Advice"} href={"/advice"} />
         <NavBarIcon icon={FaCopy} text={"Docs"} href={"/docs"} />
         <NavBarIcon icon={FaMap} text={"Map"} href={"/map"} />
-        <NavBarIcon
-          icon={FaDatabase}
-          text={"Flight Records"}
-          href={"/flight"}
-        />
+        <NavBarIcon icon={FaPlane} text={"Flight Records"} href={"/flight"} />
+        <NavBarIcon icon={FaDatabase} text={"data base"} href={"/data-base"} />
         <NavBarIcon icon={FaUsers} text={"Team Management"} href={"/team"} />
       </div>
       <div className="spacer flex-grow"></div>
