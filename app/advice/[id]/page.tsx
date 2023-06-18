@@ -1,5 +1,5 @@
 import AdviceComponent from "@/components/AdviceComponent";
-import { dummyLessons } from "../../../consts/consts";
+import { dummyLessons } from "@/consts/consts";
 
 type Props = {
   params: {

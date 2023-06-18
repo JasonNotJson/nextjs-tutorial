@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import { dummyNotes } from "../../consts/consts";
+import { dummyNotes } from "@/consts/consts";
 import { revalidatePath } from "next/cache";
 import SubmitButton from "./SubmitButton";
 import { v4 as uuidv4 } from "uuid";
