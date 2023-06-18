@@ -20,14 +20,18 @@ const Navbar = () => {
         <NavBarIcon icon={FaHome} text={"Home"} href={"/"} />
         <NavBarIcon icon={FaClipboardList} text={"Note"} href={"/note"} />
         <NavBarIcon icon={FaList} text={"Team Advice"} href={"/advice"} />
-        <NavBarIcon icon={FaCopy} text={"Docs"} />
-        <NavBarIcon icon={FaMap} text={"Map"} />
-        <NavBarIcon icon={FaDatabase} text={"Flight Records"} />
-        <NavBarIcon icon={FaUsers} text={"Team Management"} />
+        <NavBarIcon icon={FaCopy} text={"Docs"} href={"/docs"} />
+        <NavBarIcon icon={FaMap} text={"Map"} href={"/map"} />
+        <NavBarIcon
+          icon={FaDatabase}
+          text={"Flight Records"}
+          href={"/flight"}
+        />
+        <NavBarIcon icon={FaUsers} text={"Team Management"} href={"/team"} />
       </div>
       <div className="spacer flex-grow"></div>
       <div className="bottom-section flex flex-col items-center mb-4">
-        <NavBarIcon icon={FaUser} text={"User"} />
+        <NavBarIcon icon={FaUser} text={"User"} href={"/account"} />
       </div>
     </div>
   );
