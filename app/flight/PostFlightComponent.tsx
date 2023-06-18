@@ -2,6 +2,7 @@
 import { students, coaches } from "@/consts/consts";
 import { useState } from "react";
 import CustomCombobox from "@/app/flight/FlightComboBox";
+import { FaCheck } from "react-icons/fa";
 
 const PostFlightComponent = () => {
   const [selectedStudent, setSelectedStudent] = useState("");
@@ -41,6 +42,9 @@ const PostFlightComponent = () => {
         <div>出発時間</div>
         <div>離脱高度</div>
         <div>到着時間</div>
+        <div>
+          <FaCheck />
+        </div>
       </div>
     </div>
   );
