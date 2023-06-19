@@ -42,8 +42,8 @@ export interface Item {
 }
 
 export interface CustomComboboxProps {
-  selectedEntity: Item | null;
-  setSelectedEntity: React.Dispatch<React.SetStateAction<Item | null>>;
+  selectedEntity: string | null;
+  setSelectedEntity: React.Dispatch<React.SetStateAction<string | null>>;
   items: Item[];
   filterQuery: string;
   setFilterQuery: React.Dispatch<React.SetStateAction<string>>;

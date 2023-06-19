@@ -1,5 +1,30 @@
 import { Note } from "@/types";
 
+export const gliderPort = [
+  {
+    id: 1,
+    name: "妻沼滑空場",
+  },
+  {
+    id: 2,
+    name: "関宿滑空場",
+  },
+];
+
+export const gliders = [
+  {
+    id: 2365,
+    name: "WM",
+    type: "ASK21",
+    pax: "2",
+  },
+  {
+    id: 2408,
+    name: "WW",
+    type: "ASK23",
+  },
+];
+
 export const students = [
   {
     id: 1,
@@ -31,17 +56,17 @@ export const students = [
 export const coaches = [
   {
     id: 1,
-    name: "長い苗字長い名前",
+    name: "無し",
     weight: 70,
   },
   {
     id: 2,
-    name: "篠原",
+    name: "長い名前長い苗字",
     weight: 70,
   },
   {
     id: 3,
-    name: "戸張",
+    name: "もっと長い名前もっと長い苗字",
     weight: 60,
   },
   {
