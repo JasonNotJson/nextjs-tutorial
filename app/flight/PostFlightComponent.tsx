@@ -14,6 +14,9 @@ const PostFlightComponent = () => {
   const [coachQuery, setCoachQuery] = useState("");
   const [gliderQuery, setGliderQuery] = useState("");
   const [portQuery, setPortQuery] = useState("");
+  const [departureTime, setDepartureTime] = useState("");
+  const [arrivalTime, setArrivalTime] = useState("");
+  const [detatchInputValue, setDetatchInputValue] = useState("");
 
   const dateInJapan = new Date().toLocaleString("en-US", {
     timeZone: "Asia/Tokyo",
@@ -26,11 +29,23 @@ const PostFlightComponent = () => {
   const day = String(japanDate.getDate()).padStart(2, "0");
   const formattedDate = `${year}-${month}-${day}`;
 
+  const handleDepartureTimeChange = (newTime: string) => {
+    setDepartureTime(newTime);
+  };
+
+  const handleArrivalTimeChange = (newTime: string) => {
+    setArrivalTime(newTime);
+  };
+
+  const handleInputChange = (event) => {
+    setDetatchInputValue(event.target.value);
+  };
+
   return (
-    <div className="overflow-hidden ">
+    <div className="h-full">
       <div className="flex flex-col text-center text-light-text dark:text-dark-text text-6xl font-extrabold mt-12 mb-6 p-2">
         <div className="mb-6">{formattedDate} 発航記録</div>
-        <div className="flex items-center justify-center text-sm ml-16 z-20 font-normal ">
+        <div className="flex items-center justify-center text-sm ml-16 z-50 font-normal ">
           <div className="text-xl">滑空場　</div>
           <CustomCombobox
             selectedEntity={selectedPort}
@@ -38,12 +53,12 @@ const PostFlightComponent = () => {
             items={gliderPort}
             filterQuery={portQuery}
             setFilterQuery={setPortQuery}
-            placeholder="Select a GP"
+            placeholder="Select GP"
           />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-4 text-light-text dark:text-dark-text w-full ml-16 p-2">
-        <div className="text-center z-10">
+      <div className="flex flex-col md:flex-row gap-4 text-light-text dark:text-dark-text w-auto ml-16 p-2">
+        <div className="text-center z-40 w-44 ">
           <div>全席</div>
           <CustomCombobox
             selectedEntity={selectedStudent}
@@ -51,10 +66,10 @@ const PostFlightComponent = () => {
             items={students}
             filterQuery={studentQuery}
             setFilterQuery={setStudentQuery}
-            placeholder="Select a student"
+            placeholder="Select student"
           />
         </div>
-        <div className="text-center z-0">
+        <div className="text-center z-30 w-44 ">
           後席
           <CustomCombobox
             selectedEntity={selectedCoach}
@@ -62,29 +77,51 @@ const PostFlightComponent = () => {
             items={coaches}
             filterQuery={coachQuery}
             setFilterQuery={setCoachQuery}
-            placeholder="Select a coach"
+            placeholder="Select coach"
           />
         </div>
-        <div>
-          <div className="text-center z-0">機体</div>
+        <div className="z-20 w-36">
+          <div className="text-center">機体</div>
           <CustomCombobox
             selectedEntity={selectedGlider}
             setSelectedEntity={setSelectedGlider}
             items={gliders}
             filterQuery={gliderQuery}
             setFilterQuery={setGliderQuery}
-            placeholder="Select a glider"
+            placeholder="Select glider"
           />
         </div>
-        <div>出発時間</div>
-        <div>離脱高度</div>
-        <div>到着時間</div>
-        <div>
-          <FaCheck />
+        <div className="text-center w-16">
+          出発
+          <TimeButtonComponent
+            text="出発"
+            onTimeChange={handleDepartureTimeChange}
+          />
         </div>
-      </div>
-      <div className="flex items-center justify-center ml-16">
-        <TimeButtonComponent text="出発！" />
+        <div className="w-16 text-center">
+          離脱
+          <input
+            type="text"
+            className="w-16 py-1.5 px-3 mt-1 rounded-lg bg-primary-button"
+            value={detatchInputValue}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="text-center w-16">
+          到着
+          <TimeButtonComponent
+            text="到着"
+            onTimeChange={handleArrivalTimeChange}
+          />
+        </div>
+        <div className="flex flex-col">
+          <div className="flex-grow"></div>
+          <div className="flex">
+            <button className="justify-center flex py-2.5 px-3 bg-primary-button rounded-lg flex-grow items-center hover:bg-hover-button">
+              <FaCheck />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

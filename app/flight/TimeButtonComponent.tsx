@@ -4,9 +4,13 @@ import React, { useState } from "react";
 
 interface TimeButtonProps {
   text: string;
+  onTimeChange: (time: string) => void;
 }
 
-const TimeButtonComponent: React.FC<TimeButtonProps> = ({ text }) => {
+const TimeButtonComponent: React.FC<TimeButtonProps> = ({
+  text,
+  onTimeChange,
+}) => {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [currentTime, setCurrentTime] = useState("");
 
@@ -22,12 +26,18 @@ const TimeButtonComponent: React.FC<TimeButtonProps> = ({ text }) => {
     setIsButtonClicked(true);
   };
 
+  const baseClasses =
+    "justify-center items-center mt-1  outline-none bg-primary-button text-white rounded-lg select-none text-sm";
+  const hoverClass = isButtonClicked ? "" : "hover:bg-hover-button";
+
   return (
-    <div>
+    <div className={`${baseClasses} ${hoverClass}`}>
       {isButtonClicked ? (
-        <div>{currentTime}</div>
+        <div className="py-2 px-3">{currentTime}</div>
       ) : (
-        <button onClick={handleClick}>{text}</button>
+        <button onClick={handleClick} className="py-2 px-3 w-full">
+          {text}
+        </button>
       )}
     </div>
   );
