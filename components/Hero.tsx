@@ -28,13 +28,18 @@ const Hero = () => {
 
         {/* Subtitle and button container */}
         <div className="mt-2 flex flex-col items-center">
-          <p className="text-lg sm:text-2xl md:text-4xl text-light-text dark:text-white font-light mt-5">
+          <p className="text-lg sm:text-2xl md:text-4xl text-light-text dark:text-white font-light mt-1">
             統合チーム管理ツール
           </p>
           <CustomButton
             title="ログイン"
-            containerStyles="bg-primary-button text-white hover:bg-hover-button rounded-full mt-10"
+            containerStyles="bg-primary-button text-white hover:bg-hover-button rounded-full mt-5"
             handleClick={handleScroll}
+          />
+          <CustomButton
+            title="ブログを見る"
+            containerStyles="bg-primary-button text-white hover:bg-hover-button rounded-full mt-3"
+            url="https://wuac1930.exblog.jp/"
           />
         </div>
       </div>

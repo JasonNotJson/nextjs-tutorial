@@ -34,6 +34,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-*.gif
+*.mp4
 
 08-NW-0.0to100.0-above0.0winval100.0.html
