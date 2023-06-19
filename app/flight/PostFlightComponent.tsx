@@ -84,7 +84,7 @@ const PostFlightComponent = () => {
         </div>
       </div>
       <div className="flex items-center justify-center ml-16">
-        <TimeButtonComponent />
+        <TimeButtonComponent text="出発！" />
       </div>
     </div>
   );

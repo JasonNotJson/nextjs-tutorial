@@ -2,7 +2,11 @@
 
 import React, { useState } from "react";
 
-const TimeButtonComponent = () => {
+interface TimeButtonProps {
+  text: string;
+}
+
+const TimeButtonComponent: React.FC<TimeButtonProps> = ({ text }) => {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [currentTime, setCurrentTime] = useState("");
 
@@ -21,9 +25,9 @@ const TimeButtonComponent = () => {
   return (
     <div>
       {isButtonClicked ? (
-        <div>{currentTime} (JST)</div>
+        <div>{currentTime}</div>
       ) : (
-        <button onClick={handleClick}>Show Current Time in JST</button>
+        <button onClick={handleClick}>{text}</button>
       )}
     </div>
   );
