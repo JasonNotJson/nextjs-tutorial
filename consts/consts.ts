@@ -16,12 +16,16 @@ export const gliders = [
     id: 2365,
     name: "WM",
     type: "ASK21",
-    pax: "2",
   },
   {
     id: 2408,
     name: "WW",
     type: "ASK23",
+  },
+  {
+    id: 2431,
+    name: "1V",
+    type: "LS4",
   },
 ];
 
