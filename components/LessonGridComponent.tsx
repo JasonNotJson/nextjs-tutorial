@@ -19,7 +19,7 @@ const LessonGridComponent = () => {
         レッスンアドバイス
         <div className="text-lg font-bold mt-6">新しいレッスンに進む部員へ</div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 m-4 pl-16 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-10 m-4 pl-16 p-6">
         {renderLessonCards()}
       </div>
     </div>
