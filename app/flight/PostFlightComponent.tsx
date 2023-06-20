@@ -48,7 +48,6 @@ const PostFlightComponent = () => {
         selectedCoach,
         selectedGlider,
         departureTime,
-        arrivalTime,
         detatchInputValue,
       },
     };
@@ -93,7 +92,6 @@ const PostFlightComponent = () => {
       selectedCoach !== "" &&
       selectedGlider !== "" &&
       departureTime !== "" &&
-      arrivalTime !== "" &&
       detatchInputValue !== ""
     );
   };
@@ -139,7 +137,7 @@ const PostFlightComponent = () => {
       </div>
       <div className="flex flex-col md:flex-row gap-4 text-light-text dark:text-dark-text w-auto ml-16 p-2">
         <div className="text-center z-30 w-44 ">
-          <div>全席</div>
+          <div>前席</div>
           <CustomCombobox
             selectedEntity={selectedStudent}
             setSelectedEntity={setSelectedStudent}
@@ -187,19 +185,19 @@ const PostFlightComponent = () => {
             onChange={handleInputChange}
           />
         </div>
-        <div className="text-center w-16">
+        {/* <div className="text-center w-16">
           到着
           <TimeButtonComponent
             text="到着"
             onTimeChange={handleArrivalTimeChange}
           />
-        </div>
+        </div> */}
         <div className="flex flex-col">
           <div className="flex-grow"></div>
-          <div className="flex">
+          <div className="flex justify-end">
             <button
               onClick={handleButtonClick}
-              className="justify-center flex py-2.5 px-3 bg-primary-button rounded-lg flex-grow items-center hover:bg-secondary-accent text-dark-text"
+              className="flex py-2.5 px-3 bg-primary-button rounded-lg flex-grow items-center hover:bg-secondary-accent text-dark-text"
             >
               <FaCheck />
             </button>
