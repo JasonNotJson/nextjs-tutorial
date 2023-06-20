@@ -1,6 +1,6 @@
 "use client";
 import { students, coaches, gliders, gliderPort } from "@/consts/consts";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CustomCombobox from "./FlightComboBox";
 import TimeButtonComponent from "./TimeButtonComponent";
 import { FaCheck } from "react-icons/fa";
@@ -9,25 +9,17 @@ const PostFlightComponent = () => {
   const [selectedStudent, setSelectedStudent] = useState("");
   const [selectedCoach, setSelectedCoach] = useState("");
   const [selectedGlider, setSelectedGlider] = useState("");
-  const [selectedPort, setSelectedPort] = useState("");
+
   const [studentQuery, setStudentQuery] = useState("");
   const [coachQuery, setCoachQuery] = useState("");
   const [gliderQuery, setGliderQuery] = useState("");
-  const [portQuery, setPortQuery] = useState("");
+
   const [departureTime, setDepartureTime] = useState("");
   const [arrivalTime, setArrivalTime] = useState("");
   const [detatchInputValue, setDetatchInputValue] = useState("");
 
-  const dateInJapan = new Date().toLocaleString("en-US", {
-    timeZone: "Asia/Tokyo",
-  });
-  const japanDate = new Date(dateInJapan);
-
-  // Format the date in YY-mm-dd
-  const year = japanDate.getFullYear().toString().substr(-2);
-  const month = String(japanDate.getMonth() + 1).padStart(2, "0");
-  const day = String(japanDate.getDate()).padStart(2, "0");
-  const formattedDate = `${year}-${month}-${day}`;
+  const [selectedPort, setSelectedPort] = useState("");
+  const [portQuery, setPortQuery] = useState("");
 
   const handleDepartureTimeChange = (newTime: string) => {
     setDepartureTime(newTime);
@@ -40,6 +32,87 @@ const PostFlightComponent = () => {
   const handleInputChange = (event) => {
     setDetatchInputValue(event.target.value);
   };
+
+  const packageState = (stateObject) => {
+    return {
+      id: stateObject ? stateObject.id + 1 : 1,
+      states: {
+        selectedStudent,
+        selectedCoach,
+        selectedGlider,
+        studentQuery,
+        coachQuery,
+        gliderQuery,
+        departureTime,
+        arrivalTime,
+        detatchInputValue,
+      },
+    };
+  };
+
+  const addToLocalStorage = () => {
+    const retrievedStateStringified = localStorage.getItem("currentState");
+    let retrievedStateArray = retrievedStateStringified
+      ? JSON.parse(retrievedStateStringified)
+      : [];
+    const lastStateObject =
+      retrievedStateArray.length > 0
+        ? retrievedStateArray[retrievedStateArray.length - 1]
+        : null;
+    const currentStateObject = packageState(lastStateObject);
+    retrievedStateArray.push(currentStateObject);
+    const updatedStateStringified = JSON.stringify(retrievedStateArray);
+    localStorage.setItem("currentState", updatedStateStringified);
+  };
+
+  const clearLocalStorageDaily = () => {
+    const lastClearedTime = localStorage.getItem("lastClearedTime");
+
+    const currentTime = new Date().getTime();
+
+    if (
+      !lastClearedTime ||
+      currentTime - lastClearedTime > 24 * 60 * 60 * 1000
+    ) {
+      localStorage.clear();
+      localStorage.setItem("lastClearedTime", currentTime.toString());
+    }
+  };
+
+  useEffect(() => {
+    clearLocalStorageDaily();
+  }, []);
+
+  const isDataComplete = () => {
+    // Here, add conditions to check if all necessary data is filled
+    // For example:
+    // return selectedStudent && selectedCoach && selectedGlider && ... ;
+
+    // Returning true for demonstration purposes
+    return true;
+  };
+
+  const handleButtonClick = () => {
+    // Check if all data is filled
+    if (isDataComplete()) {
+      // If data is complete, add to local storage
+      addToLocalStorage();
+    } else {
+      // Optional: Show some message or alert to inform user that data is missing
+      console.log("Data is missing");
+    }
+  };
+
+  const dateInJapan = new Date().toLocaleString("en-US", {
+    timeZone: "Asia/Tokyo",
+  });
+  const japanDate = new Date(dateInJapan);
+
+  // Format the date in YY-mm-dd
+  const year = japanDate.getFullYear().toString().substr(-2);
+  const month = String(japanDate.getMonth() + 1).padStart(2, "0");
+  const day = String(japanDate.getDate()).padStart(2, "0");
+  const formattedDate = `${year}-${month}-${day}`;
 
   return (
     <div className="h-full">
@@ -117,7 +190,10 @@ const PostFlightComponent = () => {
         <div className="flex flex-col">
           <div className="flex-grow"></div>
           <div className="flex">
-            <button className="justify-center flex py-2.5 px-3 bg-primary-button rounded-lg flex-grow items-center hover:bg-hover-button">
+            <button
+              onClick={handleButtonClick}
+              className="justify-center flex py-2.5 px-3 bg-primary-button rounded-lg flex-grow items-center hover:bg-secondary-accent"
+            >
               <FaCheck />
             </button>
           </div>
