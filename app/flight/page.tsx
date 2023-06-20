@@ -7,7 +7,7 @@ const flight = () => {
       <div className="flex">
         <PostFlightComponent />
       </div>
-      <div className="flex-grow ">
+      <div className="flex z-0">
         <RecordTableComponent />
       </div>
     </div>

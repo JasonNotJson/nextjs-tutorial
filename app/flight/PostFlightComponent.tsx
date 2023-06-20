@@ -123,9 +123,9 @@ const PostFlightComponent = () => {
 
   return (
     <div className="h-full">
-      <div className="flex flex-col text-center text-light-text dark:text-dark-text text-6xl font-extrabold mt-12 mb-6 p-2">
+      <div className="flex flex-col text-center items-center text-light-text dark:text-dark-text text-2xl font-extrabold pl-16 mt-12 mb-6 p-2">
         <div className="mb-6">{formattedDate} 発航記録</div>
-        <div className="flex items-center justify-center text-sm ml-16 z-50 font-normal ">
+        <div className="flex items-center justify-center text-sm ml-16 z-40 font-normal ">
           <div className="text-xl">滑空場　</div>
           <CustomCombobox
             selectedEntity={selectedPort}
@@ -138,7 +138,7 @@ const PostFlightComponent = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-4 text-light-text dark:text-dark-text w-auto ml-16 p-2">
-        <div className="text-center z-40 w-44 ">
+        <div className="text-center z-30 w-44 ">
           <div>全席</div>
           <CustomCombobox
             selectedEntity={selectedStudent}
@@ -149,7 +149,7 @@ const PostFlightComponent = () => {
             placeholder="Select student"
           />
         </div>
-        <div className="text-center z-30 w-44 ">
+        <div className="text-center z-20 w-44 ">
           後席
           <CustomCombobox
             selectedEntity={selectedCoach}
@@ -160,7 +160,7 @@ const PostFlightComponent = () => {
             placeholder="Select coach"
           />
         </div>
-        <div className="z-20 w-36">
+        <div className="z-10 w-36">
           <div className="text-center">機体</div>
           <CustomCombobox
             selectedEntity={selectedGlider}
@@ -182,7 +182,7 @@ const PostFlightComponent = () => {
           離脱
           <input
             type="text"
-            className="w-16 py-1.5 px-3 mt-1 rounded-lg bg-primary-button"
+            className="w-16 py-1.5 px-3 mt-1 rounded-lg bg-primary-button border-white text-dark-text focus:ring-0"
             value={detatchInputValue}
             onChange={handleInputChange}
           />
@@ -199,7 +199,7 @@ const PostFlightComponent = () => {
           <div className="flex">
             <button
               onClick={handleButtonClick}
-              className="justify-center flex py-2.5 px-3 bg-primary-button rounded-lg flex-grow items-center hover:bg-secondary-accent"
+              className="justify-center flex py-2.5 px-3 bg-primary-button rounded-lg flex-grow items-center hover:bg-secondary-accent text-dark-text"
             >
               <FaCheck />
             </button>

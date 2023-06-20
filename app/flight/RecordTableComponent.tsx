@@ -10,8 +10,8 @@ const RecordTableComponent = () => {
     : [];
 
   return (
-    <div className="overflow-x-auto">
-      <table className="table table-zebra">
+    <div className="overflow-x-auto ml-16">
+      <table className="table custom-zebra table-lg text-light-text dark:text-dark-text">
         {/* head */}
         <thead>
           <tr>
