@@ -123,7 +123,7 @@ const PostFlightComponent = () => {
 
   return (
     <div className="h-full">
-      <div className="flex flex-col text-center items-center text-light-text dark:text-dark-text text-2xl font-extrabold pl-16 mt-12 mb-6 p-2">
+      <div className="flex flex-col text-center items-center text-light-text dark:text-dark-text text-2xl md:text-6xl font-extrabold pl-16 mt-12 mb-6 p-2">
         <div className="mb-6">{formattedDate} 発航記録</div>
         <div className="flex items-center justify-center text-sm ml-16 z-40 font-normal ">
           <div className="text-xl">滑空場　</div>
