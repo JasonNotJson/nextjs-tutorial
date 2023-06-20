@@ -1,4 +1,14 @@
+"use client";
+
+import { FaPen, FaTrash } from "react-icons/fa";
+
 const RecordTableComponent = () => {
+  // Retrieve data from local storage
+  const retrievedStateStringified = localStorage.getItem("currentState");
+  const retrievedStateArray = retrievedStateStringified
+    ? JSON.parse(retrievedStateStringified).reverse()
+    : [];
+
   return (
     <div className="overflow-x-auto">
       <table className="table table-zebra">
@@ -15,29 +25,40 @@ const RecordTableComponent = () => {
             <th>編集/削除</th>
           </tr>
         </thead>
-        <tbody>
-          {/* row 1 */}
-          <tr>
-            <th>1</th>
-            <td>Cy Ganderton</td>
-            <td></td>
-            <td>Blue</td>
-          </tr>
-          {/* row 2 */}
-          <tr>
-            <th>2</th>
-            <td>Hart Hagerty</td>
-            <td></td>
-            <td>Purple</td>
-          </tr>
-          {/* row 3 */}
-          <tr>
-            <th>3</th>
-            <td>Brice Swyre</td>
-            <td></td>
-            <td>Red</td>
-          </tr>
+        {/* body */}
+        <tbody className="text-lg">
+          {retrievedStateArray.map((item, index) => (
+            <tr key={index}>
+              <td>{item.id}</td>
+              <td>{item.states.selectedStudent.name}</td>
+              <td>{item.states.selectedCoach.name}</td>
+              <td>{item.states.selectedGlider.name}</td>
+              <td>{item.states.departureTime}</td>
+              <td>{item.states.detatchInputValue}</td>
+              <td>{item.states.arrivalTime}</td>
+              <td className="flex flex-row gap-4 mt-1">
+                <button>
+                  <FaPen />
+                </button>
+                <button>
+                  <FaTrash />
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
+        <tfoot>
+          <tr>
+            <th></th>
+            <th>全席</th>
+            <th>後席</th>
+            <th>機体</th>
+            <th>出発</th>
+            <th>離脱</th>
+            <th>到着</th>
+            <th>編集/削除</th>
+          </tr>
+        </tfoot>
       </table>
     </div>
   );

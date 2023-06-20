@@ -24,6 +24,7 @@ const TimeButtonComponent: React.FC<TimeButtonProps> = ({
     const formattedTime = `${hours}:${minutes}`;
     setCurrentTime(formattedTime);
     setIsButtonClicked(true);
+    onTimeChange(formattedTime);
   };
 
   const baseClasses =

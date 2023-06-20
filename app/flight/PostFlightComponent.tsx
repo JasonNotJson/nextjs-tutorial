@@ -22,12 +22,19 @@ const PostFlightComponent = () => {
   const [portQuery, setPortQuery] = useState("");
 
   const handleDepartureTimeChange = (newTime: string) => {
+    console.log("handleDepartureTimeChange called with:", newTime);
     setDepartureTime(newTime);
   };
 
+  useEffect(() => {
+    console.log("departureTime changed:", departureTime);
+  }, [departureTime]);
+
   const handleArrivalTimeChange = (newTime: string) => {
+    console.log("handleArrivalTimeChange called with:", newTime);
     setArrivalTime(newTime);
   };
+  console.log(departureTime);
 
   const handleInputChange = (event) => {
     setDetatchInputValue(event.target.value);
@@ -40,9 +47,6 @@ const PostFlightComponent = () => {
         selectedStudent,
         selectedCoach,
         selectedGlider,
-        studentQuery,
-        coachQuery,
-        gliderQuery,
         departureTime,
         arrivalTime,
         detatchInputValue,
@@ -84,12 +88,14 @@ const PostFlightComponent = () => {
   }, []);
 
   const isDataComplete = () => {
-    // Here, add conditions to check if all necessary data is filled
-    // For example:
-    // return selectedStudent && selectedCoach && selectedGlider && ... ;
-
-    // Returning true for demonstration purposes
-    return true;
+    return (
+      selectedStudent !== "" &&
+      selectedCoach !== "" &&
+      selectedGlider !== "" &&
+      departureTime !== "" &&
+      arrivalTime !== "" &&
+      detatchInputValue !== ""
+    );
   };
 
   const handleButtonClick = () => {
@@ -97,6 +103,7 @@ const PostFlightComponent = () => {
     if (isDataComplete()) {
       // If data is complete, add to local storage
       addToLocalStorage();
+      window.location.reload();
     } else {
       // Optional: Show some message or alert to inform user that data is missing
       console.log("Data is missing");
