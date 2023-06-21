@@ -97,13 +97,10 @@ const PostFlightComponent = () => {
   };
 
   const handleButtonClick = () => {
-    // Check if all data is filled
     if (isDataComplete()) {
-      // If data is complete, add to local storage
       addToLocalStorage();
       window.location.reload();
     } else {
-      // Optional: Show some message or alert to inform user that data is missing
       console.log("Data is missing");
     }
   };
