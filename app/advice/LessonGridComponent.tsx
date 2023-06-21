@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { dummyLessons } from "../consts/consts";
+import { dummyLessons } from "@/consts/consts";
 import { LessonCardProps } from "@/types";
 
 const LessonGridComponent = () => {

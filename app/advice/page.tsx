@@ -1,5 +1,5 @@
 import React from "react";
-import { LessonGridComponent } from "@/components";
+import LessonGridComponent from "./LessonGridComponent";
 
 const advice = () => {
   return (
