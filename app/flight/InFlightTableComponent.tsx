@@ -4,7 +4,7 @@ import { FaPen, FaTrash } from "react-icons/fa";
 import TimeButtonComponent from "./TimeButtonComponent";
 import { useState } from "react";
 
-const RecordTableComponent = () => {
+const InFlightTableComponent = () => {
   // Retrieve data from local storage
 
   const [arrivalTime, setArrivalTime] = useState("");
@@ -81,4 +81,4 @@ const RecordTableComponent = () => {
   );
 };
 
-export default RecordTableComponent;
+export default InFlightTableComponent;
